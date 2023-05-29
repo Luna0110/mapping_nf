@@ -14,7 +14,6 @@ workflow{
     Channel
         .fromFilePairs( params.reads)
         .set{ ch_reads }
-    ch_reads.view()
 
     bm2_index(params.ref)
     bm2_mapping(ch_reads, bm2_index.out)
