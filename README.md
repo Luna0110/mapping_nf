@@ -4,13 +4,11 @@ A nextflow pipeline takes reference genome and reads, output the alignment stats
 
 **workflow:**
 
-indexing -- mapping -- sorting -- alignment stats -- multiqc
+bwa-mem2 index -- bwa-mem2 mapping -- samtools sort -- samtools stats -- multiqc report
 
 
 **Parameter:**
 
--- ref "path/to/reference/genome"
+nextflow run /path/to/main.nf -- ref "path/to/reference/genome" -- reads "path/to/reads" -- outdir "path/to/output"
 
--- reads "path/to/reads"
 
--- outdir "path/to/output"
